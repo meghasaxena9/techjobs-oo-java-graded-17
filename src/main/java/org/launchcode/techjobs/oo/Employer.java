@@ -15,7 +15,11 @@ public class Employer {
 
     public Employer(String value) {
         this();
+        if (value == "") {
+            this.value = "Data not available";
+        } else {
         this.value = value;
+        }
     }
 
     // Custom toString, equals, and hashCode methods:

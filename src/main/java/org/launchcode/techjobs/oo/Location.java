@@ -16,6 +16,14 @@ public class Location {
     // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The
     //  constructor should also call the empty constructor in order to initialize the 'id' field.
 
+    public Location(String value) {
+        this();
+        if (value == "") {
+            this.value = "Data not available";
+        } else {
+            this.value = value;
+        }
+    }
 
     // Custom toString, equals, and hashCode methods:
 

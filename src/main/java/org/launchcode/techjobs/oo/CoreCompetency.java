@@ -13,12 +13,28 @@ public class CoreCompetency {
         nextId++;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public CoreCompetency(String value) {
         this();
-        this.value = value;
+        if (value == "") {
+            this.value = "Data not available";
+        } else {
+            this.value = value;
+        }
     }
 
     // Custom toString, equals, and hashCode methods:
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
 
     @Override
     public String toString() {
