@@ -107,7 +107,7 @@ public class Job {
                 "Name: " + name + lineSeparator() +
                 "Employer: " + employer + lineSeparator() +
                 "Location: " + location + lineSeparator() +
-                "PositionType: " + positionType + lineSeparator() +
-                "CoreCompetency: " + coreCompetency + lineSeparator();
+                "Position Type: " + positionType + lineSeparator() +
+                "Core Competency: " + coreCompetency + lineSeparator();
     }
 }

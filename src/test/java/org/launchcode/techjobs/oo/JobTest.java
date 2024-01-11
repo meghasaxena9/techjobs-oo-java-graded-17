@@ -62,11 +62,11 @@ public class JobTest {
    //     expectedstring = lineSeparator() + "" + lineSeparator();
         expectedstring = lineSeparator() +
                 "ID: " + Job1.getId() + lineSeparator() +
-                "Name: " + Job1.getName() + lineSeparator() +
-                "Employer: " + Job1.getEmployer().getValue() + lineSeparator() +
-                "Location: " + Job1.getLocation().getValue() + lineSeparator() +
-                "PositionType: " + Job1.getPositionType().getValue() + lineSeparator() +
-                "CoreCompetency: " + Job1.getCoreCompetency().getValue() + lineSeparator();
+                "Name: Product tester" + lineSeparator() +
+                "Employer: ACME" + lineSeparator() +
+                "Location: Desert" + lineSeparator() +
+                "Position Type: Quality control" + lineSeparator() +
+                "Core Competency: Persistence" + lineSeparator();
         assertEquals(expectedstring, Job1.toString());
    //     System.out.println(Job1.toString());
 
@@ -74,10 +74,10 @@ public class JobTest {
 
     @Test
     public void testToStringHandlesEmptyField() {
-        //Employer Emp1 = new Employer("Launchcode");
-        //String expectedfieldvalueEmp1 = Emp1.getValue();
-            Employer Emp1 = new Employer("");
-        String expectedfieldvalueEmp1 = "Data not available";
+        Employer Emp1 = new Employer("Launchcode");
+        String expectedfieldvalueEmp1 = Emp1.getValue();
+        //    Employer Emp1 = new Employer("");
+        //String expectedfieldvalueEmp1 = "Data not available";
 
        // Location Loc1 = new Location("StL");
        // String expectedfieldvalueLoc1 = Loc1.getValue();
@@ -89,10 +89,10 @@ public class JobTest {
         //    PositionType PT1 = new PositionType("");
         //    String expectedfieldvaluePT1 = "Data not available";
 
-        CoreCompetency CC1 = new CoreCompetency("Java");
-        String expectedfieldvalueCC1 = CC1.getValue();
-        //    CoreCompetency CC1 = new CoreCompetency("");
-        //    String expectedfieldvalueCC1 = "Data not available";
+        //CoreCompetency CC1 = new CoreCompetency("Java");
+        //String expectedfieldvalueCC1 = CC1.getValue();
+            CoreCompetency CC1 = new CoreCompetency("");
+            String expectedfieldvalueCC1 = "Data not available";
 
         Job Job1 = new Job("Web Developer", Emp1, Loc1, PT1, CC1);
         String expectedfieldvalueJob1 = Job1.getName();
@@ -103,8 +103,8 @@ public class JobTest {
                 "Name: " + expectedfieldvalueJob1 + lineSeparator() +
                 "Employer: " + expectedfieldvalueEmp1 + lineSeparator() +
                 "Location: " + expectedfieldvalueLoc1 + lineSeparator() +
-                "PositionType: " + expectedfieldvaluePT1 + lineSeparator() +
-                "CoreCompetency: " + expectedfieldvalueCC1 + lineSeparator();
+                "Position Type: " + expectedfieldvaluePT1 + lineSeparator() +
+                "Core Competency: " + expectedfieldvalueCC1 + lineSeparator();
         assertEquals(expectedstring, Job1.toString());
     }
 }
